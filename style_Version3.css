@@ -1,0 +1,178 @@
+:root {
+    --primary: #007bff;
+    --secondary: #f8f9fa;
+    --text: #333;
+    --footer-bg: #222;
+    --footer-text: #eee;
+    --btn-bg: #007bff;
+    --btn-text: #fff;
+    --nav-bg: #fff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: var(--text);
+    background: var(--secondary);
+    line-height: 1.6;
+}
+header {
+    background: var(--nav-bg);
+    box-shadow: 0 2px 4px #0001;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+}
+.logo {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: var(--primary);
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5em;
+}
+nav a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 500;
+    padding: 0.2em 0.5em;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+nav a.active,
+nav a:hover {
+    background: var(--primary);
+    color: var(--btn-text);
+}
+.hero {
+    background: var(--primary);
+    color: var(--btn-text);
+    padding: 4em 2em;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+.hero .btn {
+    display: inline-block;
+    margin-top: 1.5em;
+    padding: 0.8em 2em;
+    background: var(--btn-bg);
+    color: var(--btn-text);
+    border: none;
+    border-radius: 25px;
+    font-size: 1em;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.hero .btn:hover {
+    background: #0056b3;
+}
+.features {
+    padding: 2em;
+    text-align: center;
+}
+.feature-list {
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    margin-top: 2em;
+    flex-wrap: wrap;
+}
+.feature {
+    background: #fff;
+    padding: 1.5em;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px #0001;
+    width: 250px;
+}
+.about, .contact {
+    max-width: 600px;
+    margin: 2em auto;
+    background: #fff;
+    padding: 2em;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px #0001;
+}
+.about ul {
+    margin-top: 1em;
+    padding-left: 1.2em;
+}
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.contact label {
+    font-weight: 500;
+}
+.contact input, .contact textarea {
+    padding: 0.7em;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1em;
+    resize: vertical;
+}
+.contact button.btn {
+    background: var(--btn-bg);
+    color: var(--btn-text);
+    border: none;
+    border-radius: 25px;
+    padding: 0.8em 2em;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.2s;
+}
+.contact button.btn:hover {
+    background: #0056b3;
+}
+#formMessage {
+    margin-top: 1em;
+    font-weight: 500;
+    color: var(--primary);
+}
+footer {
+    background: var(--footer-bg);
+    color: var(--footer-text);
+    padding: 1.2em 2em;
+    text-align: center;
+    margin-top: 3em;
+    border-radius: 12px 12px 0 0;
+}
+footer ul.social {
+    list-style: none;
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    margin-top: 1em;
+    padding-left: 0;
+}
+footer ul.social li a {
+    color: var(--footer-text);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+footer ul.social li a:hover {
+    color: var(--primary);
+}
+@media (max-width: 700px) {
+    .feature-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav {
+        flex-direction: column;
+        gap: 1em;
+    }
+}
